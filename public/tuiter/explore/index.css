@@ -4,7 +4,7 @@
     left: 0;
     color: white;
     padding: 5px 10px;
-    font-size: 4em;
+    font-size: 2em;
 }
 
 .font-gray {
@@ -69,6 +69,10 @@
 
 .nav-link.override-color {
     color: gray;
+}
+
+.nav-link.override-padding {
+    padding: 1rem 1rem;
 }
 
 .nav.override-display {
