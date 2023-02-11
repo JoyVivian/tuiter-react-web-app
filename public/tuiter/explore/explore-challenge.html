@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Explore Challenge</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+          rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+          rel="stylesheet"/>
+    <link href="index.css"
+          rel="stylesheet"/>
+    <script>
+        function checkScreenSize() {
+            if (window.innerWidth < 576) {
+                console.log("Screen size is extra small");
+            } else if (window.innerWidth >= 576 && window.innerWidth < 768) {
+                console.log("Screen size is small");
+            } else if (window.innerWidth >= 768 && window.innerWidth < 992) {
+                console.log("Screen size is medium");
+            } else if (window.innerWidth >= 992 && window.innerWidth < 1200) {
+                console.log("Screen size is large");
+            } else if (window.innerWidth >= 1200 && window.innerWidth < 1400) {
+                console.log("Screen size is extra large");
+            } else {
+                console.log("Screen size if extra extra large");
+            }
+        }
+
+        window.onresize = checkScreenSize;
+        window.onload = checkScreenSize;
+    </script>
+</head>
+<body>
+<div class="container-fluid mt-3 d-flex justify-content-between" style="max-width: 90%">
+    <div class="col-xxl-2 col-xl-2 col-lg-1 col-md-2 col-sm-2 col-2 ms-3">
+        <div class="list-group">
+            <a href="#" class="list-group-item list-group-item-action"><i class="fa-brands fa-twitter fa-lg blue"></i></a>
+            <a href="../home.html"
+               class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-xxl-2 col-xl-2 d-flex justify-content-start align-items-center">
+                        <i class="fa-solid fa-house-chimney"></i>
+                    </div>
+                    <div class="col-xxl-10 col-xl-10 d-none d-xl-block d-flex justify-content-start align-items-center"><span
+                    >Home</span></div>
+                </div>
+            </a>
+            <a href="#" class="list-group-item list-group-item-action active">
+                <div class="row">
+                    <div class="col-xxl-2 col-xl-2 d-flex justify-content-start align-items-center">
+                        <i
+                                class="fa-hashtag"></i>
+                    </div>
+                    <div class="col-xxl-10 col-xl-10 d-none d-xl-block d-flex justify-content-start align-items-center">
+                        <span>Explore</span>
+                    </div>
+                </div>
+            </a>
+            <a href="../notifications.html" class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-xxl-2 col-xl-2 d-flex justify-content-start align-items-center">
+                        <i
+                                class="fa-sharp fas fa-bell" style="font-weight: lighter"></i>
+                    </div>
+                    <div class="col-xxl-10 col-xl-10 d-none d-xl-block d-flex justify-content-start align-items-center">
+                        <span>Notifications</span>
+                    </div>
+                </div>
+            </a>
+            <a href="../messages.html" class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-xxl-2 col-xl-2 d-flex justify-content-start align-items-center">
+                        <i
+                                class="fa-solid fa-envelope" style="font-weight: lighter"></i>
+                    </div>
+                    <div class="col-xxl-10 col-xl-10 d-none d-xl-block d-flex justify-content-start align-items-center">
+                        <span>Messages</span>
+                    </div>
+                </div>
+            </a>
+            <a href="../bookmarks.html" class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-xxl-2 col-xl-2 d-flex justify-content-start align-items-center">
+                        <i
+                                class="fa-solid fa-bookmark" style="font-weight: lighter"></i>
+                    </div>
+                    <div class="col-xxl-10 col-xl-10 d-none d-xl-block d-flex justify-content-start align-items-center">
+                        <span>Bookmarks</span>
+                    </div>
+                </div>
+            </a>
+            <a href="../lists.html" class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-xxl-2 col-xl-2 d-flex justify-content-start align-items-center">
+                        <i class="fa-solid fa-fire-flame-simple"></i>
+                    </div>
+                    <div class="col-xxl-10 col-xl-10 d-none d-xl-block d-flex justify-content-start align-items-center">
+                        <span>Top Articles</span>
+                    </div>
+                </div>
+            </a>
+            <a href="../profile.html" class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-xxl-2 col-xl-2 d-flex justify-content-start align-items-center">
+                        <i
+                                class="fa-solid fa-user" style="font-weight: lighter"></i>
+                    </div>
+                    <div class="col-xxl-10 col-xl-8 d-none d-xl-block d-flex justify-content-start align-items-center">
+                        <span>Profile</span>
+                    </div>
+                </div>
+            </a>
+            <a href="../more.html" class="list-group-item list-group-item-action">
+                <div class="row">
+                    <div class="col-xxl-2 col-xl-2 d-flex justify-content-start align-items-center">
+                        <i
+                                class="fa-solid fa-comment-dots" style="font-weight: lighter"></i>
+                    </div>
+                    <div class="col-xxl-10 col-xl-8 d-none d-xl-block d-flex justify-content-start align-items-center">
+                        <span>More</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="mt-2">
+            <button type="button" class="btn btn-primary rounded-pill" style="width: 100%">Tweet
+            </button>
+        </div>
+    </div>
+    <div class="col-xxl-6 col-xl-6 col-lg-7 col-md-10 col-sm-10 col-sm-10 col-10 ms-3 me-3">
+        <div class="d-flex justify-content-between">
+            <div class="col-11 my-3 rounded-pill border d-flex align-items-center">
+                <i class="fas fa-search" style="margin-left: 10px"></i>
+                <input type="text" class="form-control border-0 rounded-pill" placeholder="Search Twitter">
+            </div>
+            <div class="col-1 d-flex align-items-center justify-content-end">
+                <a href="explore-settings.html"><i class="fa-solid fa-gear fa-lg"
+                                                   style="color: rgb(0, 123, 255)"></i></a>
+            </div>
+        </div>
+        <div class="mb-2">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link active" href="./for-you.html">For you</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./trending.html">Trending</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./news.html">News</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="./sports.html">Sports</a>
+                </li>
+                <li class="d-none d-md-block">
+                    <a class="nav-link" href="./entertainment.html">Entertainment</a>
+                </li>
+            </ul>
+        </div>
+        <div class="card">
+            <div class="position-relative">
+                <img src="../../images/Starship.webp" class="card-img-top img-fluid">
+                <p class="image-caption">Spacex's Starship</p>
+            </div>
+            <div class="card-body">
+                <div class="row" style="border: 1px">
+                    <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+                        <span class="font-gray">Web Development</span><br/>
+                        <span><strong>ReactJS</strong></span><i
+                            class="fa-solid fa-circle-check px-2"></i><span class="font-gray"> - 2h</span><br/>
+                        <p style="max-width: 480px"><strong>React.js is a programming based front end library that makes
+                            it very easy to build
+                            Single
+                            Page Application or SPAs</strong></p>
+                    </div>
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 d-flex align-items-center justify-content-end">
+                        <img src="../../images/react.png" style="width: 70px; height: 70px">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="card-body">
+                <div class="row" style="border: 1px">
+                    <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 ">
+                        <span><strong>JavaScript</strong></span><i
+                            class="fa-solid fa-circle-check px-2"></i><span class="font-gray"> - 2h</span><br/>
+                        <span><strong>JavaScript is programming language that can run on broswers as well as
+                            desktops</strong></span><br/>
+                        <span class="font-gray">123k Tweets</span>
+                    </div>
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 d-flex align-items-center justify-content-end">
+                        <img src="../../images/js.png" style="width: 70px; height: 70px">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="card-body">
+                <div class="row" style="border: 1px">
+                    <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+                        <span class="font-gray">Web Development</span><br/>
+                        <span><strong>jQuery</strong></span><br/>
+                        <span class="font-gray">123k Tweets</span>
+                    </div>
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 d-flex align-items-center justify-content-end">
+                        <img src="../../images/jquery.webp" style="width: 70px; height: 70px">
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="card-body">
+                <div class="row" style="border: 1px">
+                    <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10">
+                        <span class="font-gray">Web Development</span><br/>
+                        <span><strong>NodeJS</strong></span><i
+                            class="fa-solid fa-circle-check px-2"></i><span> - 2h</span><br/>
+                        <span class="font-gray">123k Tweets</span>
+                    </div>
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 d-flex align-items-center justify-content-end">
+                        <img src="../../images/nodejs.webp" style="width: 70px; height: 70px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xxl-4 col-xl-4 col-lg-4 d-none d-lg-block  me-3">
+        <div class="list-group">
+            <div class="list-group-item">Who to follow</div>
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-xxl-2 col-xl-2 col-lg-2">
+                        <img src="../../images/java.png" class="rounded-circle" width="45" , height="45">
+                    </div>
+                    <div class=" col-xxl-8 col-xl-8 col-lg-8 d-flex align-items-center">
+                        <div>
+                            <span><strong>Java</strong></span><i class="fa-solid fa-circle-check px-2"></i><br/>
+                            <span>@Java</span>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 d-flex align-items-center justify-content-end">
+                        <button type="button" class="btn btn-primary rounded-pill">Follow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-xxl-2 col-xl-2 col-lg-2">
+                        <img src="../../images/relativity%20space.jpg" class="rounded-circle" width="45" ,
+                             height="45">
+                    </div>
+                    <div class=" col-xxl-8 col-xl-8 col-lg-8 d-flex align-items-center">
+                        <div>
+                            <span><strong>Relativity Space</strong></span><i
+                                class="fa-solid fa-circle-check px-2"></i><br/>
+                            <span>@relativityspace</span>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 d-flex align-items-center justify-content-end">
+                        <button type="button" class="btn btn-primary rounded-pill">Follow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-xxl-2 col-xl-2 col-lg-2">
+                        <img src="../../images/virgin.svg" class="rounded-circle" width="45" , height="45">
+                    </div>
+                    <div class=" col-xxl-8 col-xl-8 col-lg-8 d-flex align-items-center">
+                        <div>
+                            <span><strong>Virgin Galactic</strong></span><i
+                                class="fa-solid fa-circle-check px-2"></i><br/>
+                            <span>@virgingalactic</span>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 d-flex align-items-center justify-content-end">
+                        <button type="button" class="btn btn-primary rounded-pill">Follow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-xxl-2 col-xl-2 col-lg-2">
+                        <img src="../../images/nasa.svg" class="rounded-circle" width="45" , height="45">
+                    </div>
+                    <div class=" col-xxl-8 col-xl-8 col-lg-8 d-flex align-items-center justify-content-start">
+                        <div>
+                            <span><strong>NASA</strong></span><i class="fa-solid fa-circle-check px-2"></i><br/>
+                            <span>@NASA</span>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 d-flex align-items-center justify-content-end">
+                        <button type="button" class="btn btn-primary rounded-pill">Follow</button>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-xxl-2 col-xl-2 col-lg-2">
+                        <img src="../../images/tesla.png" class="rounded-circle" width="45" , height="45">
+                    </div>
+                    <div class=" col-xxl-8 col-xl-8 col-lg-8 d-flex align-items-center">
+                        <div>
+                            <span><strong>Tesla</strong></span><i class="fa-solid fa-circle-check px-2"></i><br/>
+                            <span>@Tesla</span>
+                        </div>
+                    </div>
+                    <div class="col-xxl-2 col-xl-2 col-lg-2 d-flex align-items-center justify-content-end">
+                        <button type="button" class="btn btn-primary rounded-pill">Follow</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

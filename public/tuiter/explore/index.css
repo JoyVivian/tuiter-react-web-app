@@ -10,3 +10,27 @@
 .font-gray {
     color: gray;
 }
+
+.blue {
+    color: rgb(28,155,241);
+}
+
+.btn-primary {
+    background-color: rgb(28,155,241);
+    border-color: rgb(28, 155, 241);
+}
+
+.list-group-item {
+    border: none;
+}
+
+.list-group-item.active {
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+
+.fa-hashtag.override-light {
+    font-weight: lighter;
+}
