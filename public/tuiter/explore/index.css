@@ -15,9 +15,20 @@
     color: rgb(28,155,241);
 }
 
-.btn-primary {
+.golden {
+    color: rgb(227,186,30);
+}
+
+.btn-primary.blue {
     background-color: rgb(28,155,241);
     border-color: rgb(28, 155, 241);
+    color: white;
+}
+
+.btn-primary.black {
+    background-color: black;
+    border-color: black;
+    color: white;
 }
 
 .list-group-item {
@@ -33,4 +44,8 @@
 
 .fa-hashtag.override-light {
     font-weight: lighter;
+}
+
+.bg-gray {
+   background-color: rgb(248,249,249);
 }
