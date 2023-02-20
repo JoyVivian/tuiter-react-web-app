@@ -1,21 +1,20 @@
 import NavigationSidebar from "../explore/NavigationSidebar/index.js";
-import PostSummaryList from "../explore/PostSummaryList/index.js";
-import PostList from "./PostList/index.js";
 
-function homeComponent() {
-    $('#wd-home').append(`
+
+function component() {
+    $('#wd-profile').append(`
   <div class="row ">
    <div class="mt-3 col-2 col-md-2 col-lg-1 col-xl-2">
-    ${NavigationSidebar('Home')}
+    ${NavigationSidebar('Profile')}
    </div>
    <div class="mt-3 col-10 col-lg-7 col-xl-6">
-    ${PostList()}
+    <div>Not Implemented</div>
    </div>
    <div class="mt-3 d-none d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
-    ${PostSummaryList()}
+    <div>Not Implemented</div>
    </div>
   </div>
    `);
 }
 
-$(homeComponent);
+$(component);

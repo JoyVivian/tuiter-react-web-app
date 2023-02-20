@@ -1,9 +1,9 @@
-const NavigationSidebar = () => {
+const NavigationSidebar = (active) => {
     return (`
     <div class="navigation-sidebar"><div class="list-group">
     <a href="#" class="list-group-item list-group-item-action"><i class="fa-brands fa-twitter"></i></a>
-    <a href="../../home.html"
-       class="list-group-item list-group-item-action">
+    <a href="../HomeScreen/index.html"
+       class="list-group-item list-group-item-action ${active === "Home" ? 'active' : ''}">
         <div class="row">
             <div class="col-xxl-2 col-xl-2 d-flex justify-content-start align-items-center"><i
                 class="fa-solid fa-house d-flex align-items-center"></i>
@@ -12,7 +12,7 @@ const NavigationSidebar = () => {
             >Home</span></div>
         </div>
     </a>
-    <a href="#" class="list-group-item list-group-item-action active">
+    <a href="../explore/index.html" class="list-group-item list-group-item-action ${active === "Explore" ? 'active' : ''}">
         <div class="row">
             <div class="col-xxl-2 col-xl-2 d-flex justify-content-start align-items-center">
                 <i
@@ -23,7 +23,7 @@ const NavigationSidebar = () => {
             </div>
         </div>
     </a>
-    <a href="../../notifications.html" class="list-group-item list-group-item-action">
+    <a href="../NotificationScreen/index.html" class="list-group-item list-group-item-action ${active === "Notifications" ? 'active' : ''}">
         <div class="row">
             <div class="col-xxl-2 col-xl-2 d-flex justify-content-start align-items-center">
                 <i
@@ -34,7 +34,7 @@ const NavigationSidebar = () => {
             </div>
         </div>
     </a>
-    <a href="../../messages.html" class="list-group-item list-group-item-action">
+    <a href="../MessageScreen/index.html" class="list-group-item list-group-item-action ${active === "Messages" ? 'active' : ''}">
         <div class="row">
             <div class="col-xxl-2 col-xl-2 d-flex justify-content-start align-items-center">
                 <i
@@ -45,7 +45,7 @@ const NavigationSidebar = () => {
             </div>
         </div>
     </a>
-    <a href="../../bookmarks.html" class="list-group-item list-group-item-action">
+    <a href="../BookmarkScreen/index.html" class="list-group-item list-group-item-action ${active === "Bookmarks" ? 'active' : ''}">
         <div class="row">
             <div class="col-xxl-2 col-xl-2 d-flex justify-content-start align-items-center">
                 <i
@@ -56,7 +56,7 @@ const NavigationSidebar = () => {
             </div>
         </div>
     </a>
-    <a href="../../lists.html" class="list-group-item list-group-item-action">
+    <a href="../ListScreen/index.html" class="list-group-item list-group-item-action ${active === "Lists" ? 'active' : ''}">
         <div class="row">
             <div class="col-xxl-2 col-xl-2 d-flex justify-content-start align-items-center">
                 <i
@@ -67,7 +67,7 @@ const NavigationSidebar = () => {
             </div>
         </div>
     </a>
-    <a href="../../profile.html" class="list-group-item list-group-item-action">
+    <a href="../ProfileScreen/index.html" class="list-group-item list-group-item-action ${active === "Profile" ? 'active' : ''}">
         <div class="row">
             <div class="col-xxl-2 col-xl-2 d-flex justify-content-start align-items-center">
                 <i
@@ -78,7 +78,7 @@ const NavigationSidebar = () => {
             </div>
         </div>
     </a>
-    <a href="../../more.html" class="list-group-item list-group-item-action">
+    <a href="../MoreScreen/index.html" class="list-group-item list-group-item-action ${active === "More" ? 'active' : ''}">
         <div class="row">
             <div class="col-xxl-2 col-xl-2 d-flex justify-content-start align-items-center">
                 <i class="fa-solid fa-circle"></i>
