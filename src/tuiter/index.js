@@ -2,6 +2,7 @@ import Nav from "../nav";
 import NavigationSidebar from "./navigation-sidebar"
 import WhoToFollowList from "./who-to-follow-list";
 import ExploreComponent from "./explore";
+import HomeScreen from "./home";
 
 function Tuiter() {
     return (
@@ -15,6 +16,9 @@ function Tuiter() {
             </div>
             <div className="d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
                 <WhoToFollowList/>
+            </div>
+            <div>
+                <HomeScreen/>
             </div>
         </div>
 
