@@ -1,19 +1,19 @@
 const TodoItem = (
     {
-        todo = {
-            done: true,
-            title: 'Buy milk',
-            status: 'COMPLETED'
-        }
-    }
+      todo = {
+        done: true,
+        title: 'Buy milk',
+        status: 'COMPLETED',
+      },
+    },
 ) => {
-    return (
-        <li>
-            <input type="checkbox" defaultChecked={todo.done}/>
-            {todo.title}
+  return (
+    <li>
+      <input type="checkbox" defaultChecked={todo.done}/>
+      {todo.title}
             ({todo.status})
-        </li>
-    );
-}
+    </li>
+  );
+};
 
 export default TodoItem;
