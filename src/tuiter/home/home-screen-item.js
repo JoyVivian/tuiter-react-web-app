@@ -2,7 +2,7 @@ import PostSummary from "./post-summary";
 
 const PostItem = ({post}) => {
     return (
-        <div className="row" style={{border: "1px solid rgb(229,234,237)", borderRadius: "15px"}}>
+        <div className="row" style={{border: "1px solid rgb(229,234,237)"}}>
             <div
                 className="mt-3 col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 d-flex flex-column justify-content-start">
                 {
