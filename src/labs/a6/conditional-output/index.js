@@ -5,7 +5,6 @@ import ConditionalOutputInline from "./conditional-output-inline";
 
 
 const ConditionalOutput = () => {
-    const [show, setShow] = useState(true);
     return (
         <>
             <ConditionalOutputIfElse/>
