@@ -1,12 +1,17 @@
 import React, {useState} from "react";
 import { useDispatch, useSelector} from "react-redux";
-import { addTodo } from "./reducers/todos-reducer";
+import { addTodo, deleteTodo } from "./reducers/todos-reducer";
 
 const Todos = () => {
     const todos = useSelector(state => state.todos);
 
     const [todo, setTodo] = useState({do: ''});
     const dispatch = useDispatch();
+
+    const deleteTodoClickHandler = (index) => {
+        dispatch(deleteTodo(index))
+    }
+
     const createTodoClickHandler = () => {
         dispatch(addTodo(todo))
     }
@@ -28,8 +33,9 @@ const Todos = () => {
                     <input onChange={todoChangeHandler} value={todo.do} className="form-control w-75"/>
                 </li>
                 {
-                    todos.map(todo => <li className="list-group-item">
-                            {todo.do}
+                    todos.map((todo, index) => <li key={todo._id} className="list-group-item">
+                        <button onClick={() => deleteTodoClickHandler(index)} className="btn btn-danger float-end ms-2">Delete</button>
+                        {todo.do}
                         </li>
                     )
                 }
