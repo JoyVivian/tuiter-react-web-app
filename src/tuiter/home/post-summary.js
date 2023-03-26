@@ -6,7 +6,9 @@ const PostSummary = ({post, isDot}) => {
         <span className="me-1"><strong>{post.userName}</strong></span><i
           className="bi bi-patch-check-fill"
           style={{color: 'rgb(29,155,240)'}}></i><span className="ms-1"
-          style={{color: 'gray'}}>{post.handle}</span><span
+          style={{color: 'gray'}}>{post.handle}</span>
+          <span> . </span>
+          <span
           style={{color: 'gray'}}>{post.time}</span><br/>
         <p>{post.tuit}
           {post.isLink &&
