@@ -1,4 +1,12 @@
+import { useDispatch } from "react-redux";
+import {deleteTuit} from "../tuits/tuits-reducer";
+
 const PostSummary = ({post, isDot}) => {
+    const dispath = useDispatch();
+    const deleteTuitHandler = (id) => {
+        dispath(deleteTuit(id));
+    };
+
   return (
     <div className="row me-3">
       <div className="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10"
@@ -21,6 +29,9 @@ const PostSummary = ({post, isDot}) => {
           <i className="bi bi-three-dots" style={{color: 'gray'}}></i>
         </div>
       }
+      <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2 d-flex align-items-start justify-content-end"> <i className="bi bi-x-lg float-end"
+               onClick={() => deleteTuitHandler(post._id)}></i>
+      </div>
     </div>
   );
 };
