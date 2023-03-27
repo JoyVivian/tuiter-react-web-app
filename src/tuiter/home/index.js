@@ -1,15 +1,14 @@
-import postArray from './posts-content.json';
-import PostItem from './home-screen-item';
+import React from "react";
+import TuitsList from "../tuits/tuits-list";
+import WhatsHappening from "./whats-happening";
 
-const HomeScreen = () => {
-  return (
-    <ul className="list-group">
-      {
-        postArray.map((post) =>
-          <PostItem key={post._id} post={post}/>)
-      }
-    </ul>
+const HomeComponent = () => {
+  return(
+      <>
+        <h4>Home</h4>
+        <WhatsHappening/>
+        <TuitsList/>
+      </>
   );
 };
-
-export default HomeScreen;
+export default HomeComponent;
