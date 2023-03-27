@@ -1,13 +1,24 @@
 import {useSelector} from "react-redux";
+import {useNavigate} from "react-router";
 
 const ProfileComponent = () => {
     const user = useSelector((state) => state.profile);
+
+    const navigate = useNavigate();
+
+    const handleEdit = () => {
+        navigate('/tuiter/edit-profile');
+    }
+
+    const handleBack = () => {
+        navigate('/tuiter');
+    }
 
     return (
         <div>
             <div className="row">
                 <div className="d-flex align-items-center col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
-                    <i className="bi bi-arrow-left"></i>
+                    <i className="bi bi-arrow-left" onClick={handleBack}></i>
                 </div>
                 <div
                     className="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 d-flex justify-content-start flex-column">
@@ -35,7 +46,8 @@ const ProfileComponent = () => {
                         borderBottom: '1px solid lightgray',
                     }}/>
                 <button className="btn rounded-pill border-secondary mt-2"
-                        style={{height: "50px", width: "200px", border: "ipx solid lightgray"}}>Edit Profile
+                        style={{height: "50px", width: "200px", border: "ipx solid lightgray"}}
+                        onClick={handleEdit}>Edit Profile
                 </button>
             </div>
             <div>
