@@ -1,0 +1,14 @@
+{
+  "firstname": "Wei",
+  "lastname": "Zhang",
+  "handle": "@weizhang",
+  "profilePicture": "cat.png",
+  "bannerPicture": "banner.png",
+  "bio": "I am a cat.",
+  "website": "weizhangs.blog",
+  "location": "Boston, MA",
+  "dateOfBirth": "06/30/1997",
+  "dateJoined": "04/30/2023",
+  "followinCount": 520,
+  "followsCount": 123
+}
