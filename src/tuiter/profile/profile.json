@@ -2,13 +2,13 @@
   "firstname": "Wei",
   "lastname": "Zhang",
   "handle": "@weizhang",
-  "profilePicture": "cat.png",
-  "bannerPicture": "banner.png",
+  "profilePicture": "java.png",
+  "bannerPicture": "Starship.webp",
   "bio": "I am a cat.",
   "website": "weizhangs.blog",
   "location": "Boston, MA",
   "dateOfBirth": "06/30/1997",
-  "dateJoined": "04/30/2023",
-  "followinCount": 520,
+  "dateJoined": "April 2023",
+  "followingCount": 520,
   "followsCount": 123
 }

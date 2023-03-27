@@ -8,10 +8,11 @@ import whoReducer from "./reducers/who-reducer";
 import {configureStore} from "@reduxjs/toolkit";
 import {Provider} from "react-redux";
 import tuitsReducer from "./tuits/tuits-reducer";
+import profileReducer from "./profile/profile-reducer";
 import HomeComponent from "./home";
 import ProfileComponent from "./profile";
 
-const store = configureStore({reducer: {who: whoReducer, tuits: tuitsReducer}});
+const store = configureStore({reducer: {who: whoReducer, tuits: tuitsReducer, profile: profileReducer}});
 
 function Tuiter() {
     return (

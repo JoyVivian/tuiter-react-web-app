@@ -1,7 +1,7 @@
 import {useSelector} from "react-redux";
 
 const ProfileComponent = () => {
-    // const {user} = useSelector((state) => state.profile);
+    const user = useSelector((state) => state.profile);
 
     return (
         <div>
@@ -12,18 +12,18 @@ const ProfileComponent = () => {
                 <div
                     className="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 d-flex justify-content-start flex-column">
                     <div className="d-flex align-items-start"><span
-                        style={{fontSize: "28px"}}><strong>Wei Zhang</strong></span></div>
+                        style={{fontSize: "28px"}}><strong>{user.firstname} {user.lastname}</strong></span></div>
                     <div className="d-flex align-items-start"><span style={{color: "gray"}}>520 Tweets</span></div>
                 </div>
             </div>
             <div>
                 <img
-                    src="../../images/Starship.webp"
+                    src={`../../images/${user.bannerPicture}`}
                     style={{height: '200px', width: '100%'}} className="img-fluid"/>
             </div>
             <div className="d-flex justify-content-between ms-4">
                 <img
-                    src="../../images/java.png"
+                    src={`../../images/${user.profilePicture}`}
                     style={{
                         width: '150px',
                         height: '150px',
@@ -40,26 +40,28 @@ const ProfileComponent = () => {
             </div>
             <div>
                 <div className="d-flex align-items-start"><span
-                    style={{fontSize: "28px"}}><strong>Wei Zhang</strong></span></div>
-                <div className="d-flex align-items-start"><span style={{color: "gray"}}>@weizhang</span></div>
+                    style={{fontSize: "28px"}}><strong>{user.firstname} {user.lastname}</strong></span></div>
+                <div className="d-flex align-items-start"><span style={{color: "gray"}}>{user.handle}</span></div>
             </div>
             <div className="mt-4 mb-4 d-flex align-items-start">
-                Test, test, test, test, test, test
+                {user.bio}
             </div>
 
             <div className="d-flex justify-content-start mb-3">
-                <div className="me-4"><i className="bi bi-geo-alt"></i><span className="ms-2" style={{color: "gray"}}>Boston, MA</span>
+                <div className="me-4"><i className="bi bi-geo-alt"></i><span className="ms-2"
+                                                                             style={{color: "gray"}}>{user.location}</span>
                 </div>
                 <div className="me-4"><i className="bi bi-balloon"></i><span className="ms-2"
-                                                                             style={{color: "gray"}}>06/30/1997</span>
+                                                                             style={{color: "gray"}}>{user.dateOfBirth}</span>
                 </div>
-                <div><i className="bi bi-calendar-check"></i><span className="ms-2" style={{color: "gray"}}>Joined April 2023</span>
+                <div><i className="bi bi-calendar-check"></i><span className="ms-2"
+                                                                   style={{color: "gray"}}>Joined {user.dateJoined}</span>
                 </div>
             </div>
 
             <div className="d-flex justify-content-start">
-                <span><strong>340</strong> Following</span>
-                <span className="ms-4"><strong>223</strong> Followers</span>
+                <span><strong>{user.followingCount}</strong> Following</span>
+                <span className="ms-4"><strong>{user.followsCount}</strong> Followers</span>
             </div>
         </div>
     );
