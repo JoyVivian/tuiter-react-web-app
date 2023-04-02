@@ -1,6 +1,6 @@
 import {useState} from "react";
 import {useDispatch} from "react-redux";
-import {updateLikes} from "./tuits-reducer";
+import {updateTuitThunk} from "../services/tuits-thunks";
 
 
 const TuitStatus = ({post}) => {
@@ -15,8 +15,8 @@ const TuitStatus = ({post}) => {
             liked: !tuit.liked
         };
         setTuit(newTuit);
-
-        dispatch(updateLikes(newTuit));
+        
+        dispatch(updateTuitThunk(newTuit));
     }
 
     return (

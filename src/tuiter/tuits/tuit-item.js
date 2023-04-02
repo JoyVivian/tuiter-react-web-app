@@ -1,7 +1,11 @@
 import PostSummary from '../home/post-summary';
 import TuitStatus from "./tuit-stats";
+import {deleteTuitThunk} from "../services/tuits-thunks";
+import {useDispatch} from "react-redux";
 
 const TuitItem = ({post}) => {
+
+
     return (
         <div className="row" style={{border: '1px solid rgb(229,234,237)'}}>
             <div
@@ -15,7 +19,6 @@ const TuitItem = ({post}) => {
                 <PostSummary post={post} isDot={false}/>
                 <TuitStatus post={post}/>
             </div>
-
         </div>
     );
 };

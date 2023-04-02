@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import { createTuit } from "../tuits/tuits-reducer";
-import { useDispatch } from "react-redux";
+import {createTuitThunk} from "../services/tuits-thunks.js";
+import {useDispatch} from "react-redux";
 
 const WhatsHappening = () => {
     let [whatsHappening, setWhatsHappening] = useState('');
@@ -12,7 +12,7 @@ const WhatsHappening = () => {
             tuit: whatsHappening
         }
 
-        dispath(createTuit(newTuit));
+        dispath(createTuitThunk(newTuit));
     }
 
     return (
@@ -39,7 +39,9 @@ const WhatsHappening = () => {
                     </div>
                 </div>
             </div>
-            <div className="col-12"><hr/></div>
+            <div className="col-12">
+                <hr/>
+            </div>
         </div>
     );
 }
