@@ -15,7 +15,18 @@ const TuitStatus = ({post}) => {
             liked: !tuit.liked
         };
         setTuit(newTuit);
-        
+
+        dispatch(updateTuitThunk(newTuit));
+    }
+
+    const dislikeHandler = () => {
+        const newTuit = {
+            ...tuit,
+            dislikes: tuit.disliked ? tuit.dislikes - 1 : tuit.dislikes + 1,
+            disliked: !tuit.disliked
+        };
+        setTuit(newTuit);
+
         dispatch(updateTuitThunk(newTuit));
     }
 
@@ -38,6 +49,14 @@ const TuitStatus = ({post}) => {
                             style={{color: 'lightgray'}} onClick={likeHandler}></i></a>
                         <span className="wd-icon-num" style={{color: 'gray'}}><em
                             className="">{post.likes}</em></span>
+                    </div>
+                    <div>
+                        <a href="#"><i
+                            className={`bi bi-hand-thumbs-down-fill me-3 clickable ${post.disliked ? 'text-primary' : 'text-secondary'}`}
+                            style={{color: 'lightgray'}} onClick={dislikeHandler}>
+                        </i></a>
+                        <span className="wd-icon-num" style={{color: 'gray'}}><em
+                            className="">{post.dislikes}</em></span>
                     </div>
                     <div>
                         <a href="#"><i className="bi bi-upload"
