@@ -3,11 +3,6 @@ import {deleteTuitThunk} from "../services/tuits-thunks";
 // import {deleteTuit} from "../tuits/tuits-reducer";
 
 const PostSummary = ({post, isDot}) => {
-    // const dispath = useDispatch();
-    // const deleteTuitHandler = (id) => {
-    //     dispath(deleteTuit(id));
-    // };
-
     const dispatch = useDispatch();
     const deleteTuitHandler = (id) => {
         dispatch(deleteTuitThunk(id));

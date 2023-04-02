@@ -9,7 +9,7 @@ const WhatsHappening = () => {
 
     const tuitClickHandler = () => {
         const newTuit = {
-            tuit: whatsHappening
+            tuit: whatsHappening,
         }
 
         dispath(createTuitThunk(newTuit));
